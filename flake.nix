@@ -3,7 +3,7 @@
 
   outputs = _: {
     nixosModules = {
-      valheim = import ./modules/vintagestory.nix;
+      vintagestory = import ./modules/vintagestory.nix;
     };
   };
 }
