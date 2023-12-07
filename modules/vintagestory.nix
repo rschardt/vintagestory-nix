@@ -79,7 +79,7 @@ in {
       description = "Vintage Story user";
       shell = pkgs.bash;
       isNormalUser = true;
-		  createHome = true;
+      createHome = true;
     };
 
     networking.firewall = {
