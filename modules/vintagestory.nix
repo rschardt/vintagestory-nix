@@ -99,7 +99,7 @@ in {
         rm -r {${cfg.dataPath}} || true
         mkdir -p {${cfg.dataPath},${cfg.logPath}}
 
-        vintagestory-server --dataPath ${cfg.dataPath} --logPath ${cfg.logPath} --port ${cfg.port} --maxclients ${cfg.maxclients} #--setconfig ${cfg.jsonConfig}
+        vintagestory-server --dataPath ${cfg.dataPath} --logPath ${cfg.logPath} --port ${builtins.toString cfg.port} --maxclients ${builtins.toString cfg.maxclients} #--setconfig ${cfg.jsonConfig}
         ## TODO Add Modding
         # --addOrigin      Tells the asset manager to also load assets from this path
         # --addModPath     Tells the mod loader to also load mods from this path
