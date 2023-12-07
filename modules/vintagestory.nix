@@ -96,10 +96,10 @@ in {
       script = ''
         cd ~
 
-        rm -r {${cfg.dataPath}} || true
         mkdir -p {${cfg.dataPath},${cfg.logPath}}
 
         vintagestory-server --dataPath ${cfg.dataPath} --logPath ${cfg.logPath} --port ${builtins.toString cfg.port} --maxclients ${builtins.toString cfg.maxClients}
+        ## TODO add --setconfig $ {cfg.jsonConfig}
         ## TODO Add Modding
         # --addOrigin      Tells the asset manager to also load assets from this path
         # --addModPath     Tells the mod loader to also load mods from this path
