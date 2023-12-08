@@ -458,6 +458,7 @@ in {
         EOF
 
         vintagestory-server --dataPath ${cfg.dataPath} --logPath ${cfg.logPath} --port ${builtins.toString cfg.port} --maxclients ${builtins.toString cfg.maxClients}
+
         ## TODO Add Modding
         # --addOrigin      Tells the asset manager to also load assets from this path
         # --addModPath     Tells the mod loader to also load mods from this path
